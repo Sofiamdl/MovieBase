@@ -14,6 +14,6 @@ class PopularCell: UICollectionViewCell {
     
     func draw(_ movie: Movie) {
         title.text = movie.title
-        image.image = UIImage(named: movie.image)
+        image.loadFrom(URLAddress: movie.image)
     }
 }
