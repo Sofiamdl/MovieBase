@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FeaturedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     var upcomingArray: [Movie] = [Movie(image: "https://ingresso-a.akamaihd.net/prd/img/movie/sonic-2/fde04f56-1afb-4c71-9ff2-97dac723f8d8.jpg", title: "SONIC", date: "11 Jun")]
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension FeaturedViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.popularCollectionView {
             return popularArray.count
