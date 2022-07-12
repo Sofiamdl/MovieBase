@@ -19,6 +19,11 @@
 		BFF5F7AA28773265000E2D8F /* PopularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F7A928773265000E2D8F /* PopularCell.swift */; };
 		BFF5F7AC28773271000E2D8F /* NowPlayingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F7AB28773271000E2D8F /* NowPlayingCell.swift */; };
 		BFF5F7AF287760CC000E2D8F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F7AE287760CC000E2D8F /* Image.swift */; };
+		BFF5F7B6287DF57E000E2D8F /* Movie+TrendingThisWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F7B1287DF57E000E2D8F /* Movie+TrendingThisWeek.swift */; };
+		BFF5F7B7287DF57E000E2D8F /* Movie+TrendingToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F7B2287DF57E000E2D8F /* Movie+TrendingToday.swift */; };
+		BFF5F7B8287DF57E000E2D8F /* Movie+Upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F7B3287DF57E000E2D8F /* Movie+Upcoming.swift */; };
+		BFF5F7B9287DF57E000E2D8F /* Movie+Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F7B4287DF57E000E2D8F /* Movie+Popular.swift */; };
+		BFF5F7BA287DF57E000E2D8F /* Movie+NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F7B5287DF57E000E2D8F /* Movie+NowPlaying.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		BFF5F7A928773265000E2D8F /* PopularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCell.swift; sourceTree = "<group>"; };
 		BFF5F7AB28773271000E2D8F /* NowPlayingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCell.swift; sourceTree = "<group>"; };
 		BFF5F7AE287760CC000E2D8F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		BFF5F7B1287DF57E000E2D8F /* Movie+TrendingThisWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+TrendingThisWeek.swift"; sourceTree = "<group>"; };
+		BFF5F7B2287DF57E000E2D8F /* Movie+TrendingToday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+TrendingToday.swift"; sourceTree = "<group>"; };
+		BFF5F7B3287DF57E000E2D8F /* Movie+Upcoming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Upcoming.swift"; sourceTree = "<group>"; };
+		BFF5F7B4287DF57E000E2D8F /* Movie+Popular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Popular.swift"; sourceTree = "<group>"; };
+		BFF5F7B5287DF57E000E2D8F /* Movie+NowPlaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+NowPlaying.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +100,11 @@
 		BFF5F79E287730ED000E2D8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BFF5F7B5287DF57E000E2D8F /* Movie+NowPlaying.swift */,
+				BFF5F7B4287DF57E000E2D8F /* Movie+Popular.swift */,
+				BFF5F7B1287DF57E000E2D8F /* Movie+TrendingThisWeek.swift */,
+				BFF5F7B2287DF57E000E2D8F /* Movie+TrendingToday.swift */,
+				BFF5F7B3287DF57E000E2D8F /* Movie+Upcoming.swift */,
 				BFF5F7A228773166000E2D8F /* Movie.swift */,
 				BFF5F7A4287731D2000E2D8F /* Collections.swift */,
 			);
@@ -198,12 +213,17 @@
 			files = (
 				BFF5F78E28737770000E2D8F /* FeaturedViewController.swift in Sources */,
 				BFF5F7AF287760CC000E2D8F /* Image.swift in Sources */,
+				BFF5F7B7287DF57E000E2D8F /* Movie+TrendingToday.swift in Sources */,
 				BFF5F7A82877325A000E2D8F /* UpcomingCell.swift in Sources */,
+				BFF5F7B8287DF57E000E2D8F /* Movie+Upcoming.swift in Sources */,
 				BFF5F78A28737770000E2D8F /* AppDelegate.swift in Sources */,
 				BFF5F78C28737770000E2D8F /* SceneDelegate.swift in Sources */,
+				BFF5F7B6287DF57E000E2D8F /* Movie+TrendingThisWeek.swift in Sources */,
+				BFF5F7B9287DF57E000E2D8F /* Movie+Popular.swift in Sources */,
 				BFF5F7A328773166000E2D8F /* Movie.swift in Sources */,
 				BFF5F7A5287731D2000E2D8F /* Collections.swift in Sources */,
 				BFF5F7AA28773265000E2D8F /* PopularCell.swift in Sources */,
+				BFF5F7BA287DF57E000E2D8F /* Movie+NowPlaying.swift in Sources */,
 				BFF5F7AC28773271000E2D8F /* NowPlayingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

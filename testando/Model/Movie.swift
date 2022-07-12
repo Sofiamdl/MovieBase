@@ -8,9 +8,9 @@
 import Foundation
 
 struct Movie {
-    let backdrop: String
-    let poster: String
     let title: String
+    let poster: String
+    let backdrop: String
     let voteAverage: Float
     let releaseDate: String
     let overview: String

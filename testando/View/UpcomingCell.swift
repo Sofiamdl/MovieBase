@@ -16,7 +16,7 @@ class UpcomingCell: UICollectionViewCell {
     
     func draw(_ movie: Movie) {
         title.text = movie.title
-        image.loadFrom(URLAddress: movie.poster)
+        image.image = UIImage(named: movie.poster)
         date.text = movie.releaseDate
     }
 }
