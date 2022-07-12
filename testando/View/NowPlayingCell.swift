@@ -15,7 +15,7 @@ class NowPlayingCell: UICollectionViewCell {
     
     func draw(_ movie: Movie) {
         title.text = movie.title
-        image.loadFrom(URLAddress: movie.image)
-        date.text = movie.date
+        image.loadFrom(URLAddress: movie.poster)
+        date.text = movie.releaseDate
     }
 }

@@ -26,9 +26,9 @@ class FeaturedViewController: UIViewController {
     @IBOutlet weak var nowPlayingCollectionView: UICollectionViewNowPlaying!
     @IBOutlet weak var upcomingCollectionView: UICollectionViewUpcoming!
     
-    var popularArray: [Movie] = [Movie(image: "https://cinema10.com.br/upload/filmes/filmes_12810_01-1.jpg?default=poster", title: "SONIC", date: "11 Jun"), Movie(image: "https://cinema10.com.br/upload/filmes/filmes_12810_01-1.jpg?default=poster", title: "JURASSIC PARK BOY", date: "25 DEZ")]
-    var nowPlayingArray: [Movie] = [Movie(image: "https://ingresso-a.akamaihd.net/prd/img/movie/sonic-2/fde04f56-1afb-4c71-9ff2-97dac723f8d8.jpg", title: "SONIC", date: "11 Jun")]
-    var upcomingArray: [Movie] = [Movie(image: "https://ingresso-a.akamaihd.net/prd/img/movie/sonic-2/fde04f56-1afb-4c71-9ff2-97dac723f8d8.jpg", title: "SONIC", date: "11 Jun")]
+    var popularArray: [Movie] = [Movie(backdrop: "https://ingresso-a.akamaihd.net/prd/img/movie/sonic-2/fde04f56-1afb-4c71-9ff2-97dac723f8d8.jpg", poster: "https://ingresso-a.akamaihd.net/prd/img/movie/sonic-2/fde04f56-1afb-4c71-9ff2-97dac723f8d8.jpg", title: "Harry potter 1", voteAverage: 4.5, releaseDate: "2001", overview: "Um bruxinho vai pra escola de magia <3. Altas aventuras.", genres: ["Fantasia", "Ação", "Mistério"])]
+    var nowPlayingArray: [Movie] = [Movie(backdrop: "https://ingresso-a.akamaihd.net/prd/img/movie/sonic-2/fde04f56-1afb-4c71-9ff2-97dac723f8d8.jpg", poster: "https://ingresso-a.akamaihd.net/prd/img/movie/sonic-2/fde04f56-1afb-4c71-9ff2-97dac723f8d8.jpg", title: "Harry potter 1", voteAverage: 4.5, releaseDate: "2001", overview: "Um bruxinho vai pra escola de magia <3. Altas aventuras.", genres: ["Fantasia", "Ação", "Mistério"])]
+    var upcomingArray: [Movie] = [Movie(backdrop: "https://ingresso-a.akamaihd.net/prd/img/movie/sonic-2/fde04f56-1afb-4c71-9ff2-97dac723f8d8.jpg", poster: "https://ingresso-a.akamaihd.net/prd/img/movie/sonic-2/fde04f56-1afb-4c71-9ff2-97dac723f8d8.jpg", title: "Harry potter 1", voteAverage: 4.5, releaseDate: "2001", overview: "Um bruxinho vai pra escola de magia <3. Altas aventuras.", genres: ["Fantasia", "Ação", "Mistério"])]
 }
 
 extension FeaturedViewController: UICollectionViewDelegate, UICollectionViewDataSource {

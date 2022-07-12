@@ -330,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2804.347826086957" y="224.33035714285714"/>
+            <point key="canvasLocation" x="2972" y="101"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2tc-rS-fME">
@@ -352,7 +352,7 @@
             </objects>
             <point key="canvasLocation" x="73.913043478260875" y="101.11607142857143"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Movies-->
         <scene sceneID="0Rg-Ra-iAc">
             <objects>
                 <viewController id="DKS-Ig-gMT" sceneMemberID="viewController">
@@ -362,12 +362,12 @@
                         <viewLayoutGuide key="safeArea" id="VgY-U4-UxO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lN8-Ad-nhq"/>
+                    <navigationItem key="navigationItem" title="Search Movies" id="lN8-Ad-nhq"/>
                     <size key="freeformSize" width="414" height="896"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgD-pI-Nzj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1931.8840579710147" y="-635.49107142857144"/>
+            <point key="canvasLocation" x="2042" y="-950"/>
         </scene>
         <!--Featured-->
         <scene sceneID="fOH-pv-vlm">
@@ -388,7 +388,7 @@
             </objects>
             <point key="canvasLocation" x="984.05797101449286" y="101.11607142857143"/>
         </scene>
-        <!--View Controller-->
+        <!--Trending-->
         <scene sceneID="vxR-Cm-MLP">
             <objects>
                 <viewController id="F5l-hL-npm" sceneMemberID="viewController">
@@ -398,12 +398,12 @@
                         <viewLayoutGuide key="safeArea" id="2cM-Op-s7x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dT5-l8-orK"/>
+                    <navigationItem key="navigationItem" title="Trending" id="dT5-l8-orK"/>
                     <size key="freeformSize" width="414" height="896"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFi-Bn-6tj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1931.8840579710147" y="997.76785714285711"/>
+            <point key="canvasLocation" x="2039" y="1198"/>
         </scene>
         <!--Trending-->
         <scene sceneID="def-US-JdG">
@@ -411,8 +411,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bLn-dW-Dum" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="-1" title="Trending" image="flame" catalog="system" selectedImage="flame.fill" id="nPf-tg-gJ2"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V08-ki-VlU">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="V08-ki-VlU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -422,16 +422,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dds-Dh-NWI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021.7391304347827" y="997.76785714285711"/>
+            <point key="canvasLocation" x="984" y="1197"/>
         </scene>
-        <!--Item-->
+        <!--Search-->
         <scene sceneID="zNg-Fx-M7C">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QBU-EM-epj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="GrJ-yN-9cx"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="GrJ-yN-9cx"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NkT-da-CY9">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="NkT-da-CY9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -441,7 +441,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WkL-hu-KLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021.7391304347827" y="-635.49107142857144"/>
+            <point key="canvasLocation" x="984" y="-949"/>
         </scene>
     </scenes>
     <resources>
