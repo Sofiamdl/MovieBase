@@ -24,6 +24,7 @@
 		BFF5F7B8287DF57E000E2D8F /* Movie+Upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F7B3287DF57E000E2D8F /* Movie+Upcoming.swift */; };
 		BFF5F7B9287DF57E000E2D8F /* Movie+Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F7B4287DF57E000E2D8F /* Movie+Popular.swift */; };
 		BFF5F7BA287DF57E000E2D8F /* Movie+NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F7B5287DF57E000E2D8F /* Movie+NowPlaying.swift */; };
+		BFF5F7BC287E144A000E2D8F /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F7BB287E144A000E2D8F /* FeaturedViewController+UICollectionViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		BFF5F7B3287DF57E000E2D8F /* Movie+Upcoming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Upcoming.swift"; sourceTree = "<group>"; };
 		BFF5F7B4287DF57E000E2D8F /* Movie+Popular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Popular.swift"; sourceTree = "<group>"; };
 		BFF5F7B5287DF57E000E2D8F /* Movie+NowPlaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+NowPlaying.swift"; sourceTree = "<group>"; };
+		BFF5F7BB287E144A000E2D8F /* FeaturedViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				BFF5F78D28737770000E2D8F /* FeaturedViewController.swift */,
+				BFF5F7BB287E144A000E2D8F /* FeaturedViewController+UICollectionViewDataSource.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				BFF5F7AF287760CC000E2D8F /* Image.swift in Sources */,
 				BFF5F7B7287DF57E000E2D8F /* Movie+TrendingToday.swift in Sources */,
 				BFF5F7A82877325A000E2D8F /* UpcomingCell.swift in Sources */,
+				BFF5F7BC287E144A000E2D8F /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */,
 				BFF5F7B8287DF57E000E2D8F /* Movie+Upcoming.swift in Sources */,
 				BFF5F78A28737770000E2D8F /* AppDelegate.swift in Sources */,
 				BFF5F78C28737770000E2D8F /* SceneDelegate.swift in Sources */,
