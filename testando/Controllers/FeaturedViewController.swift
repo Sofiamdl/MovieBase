@@ -13,10 +13,14 @@ class FeaturedViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         popularCollectionView.dataSource = self
-        
+        popularCollectionView.delegate = self
+
         nowPlayingCollectionView.dataSource = self
-        
+        nowPlayingCollectionView.delegate = self
+
         upcomingCollectionView.dataSource = self
+        upcomingCollectionView.delegate = self
+
         print(popularArray)
     }
     
@@ -30,5 +34,13 @@ class FeaturedViewController: UIViewController {
     
     let upcomingArray = Movie.upcomingMovies()
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailsViewController {
+            let movie = sender as? Movie
+            destination.movie = movie
+        }
+        // passar o filme adiante
+    }
+
 }
 

@@ -20,22 +20,22 @@ extension FeaturedViewController: UICollectionViewDataSource {
         
     }
     
-    fileprivate func makePopularCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularCell", for: indexPath) as! PopularCell
+    fileprivate func makePopularCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> PopularCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCell.cellIdentifier, for: indexPath) as! PopularCell
         let card = popularArray[indexPath.row]
         cell.draw(card)
         return cell
     }
     
-    fileprivate func makeNowPlayingCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NowPlayingCell", for: indexPath) as! NowPlayingCell
+    fileprivate func makeNowPlayingCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> NowPlayingCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NowPlayingCell.cellIdentifier, for: indexPath) as! NowPlayingCell
         let card = nowPlayingArray[indexPath.row]
         cell.draw(card)
         return cell
     }
     
-    fileprivate func makeUpcomingCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UpcomingCell", for: indexPath) as! UpcomingCell
+    fileprivate func makeUpcomingCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> UpcomingCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCell.cellIdentifier, for: indexPath) as! UpcomingCell
         let card = upcomingArray[indexPath.row]
         cell.draw(card)
         return cell
