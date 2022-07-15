@@ -20,6 +20,18 @@ extension FeaturedViewController: UICollectionViewDataSource {
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if collectionView == popularCollectionView {
+            return makePopularCell(collectionView, indexPath)
+        } else if collectionView == nowPlayingCollectionView {
+            return makeNowPlayingCell(collectionView, indexPath)
+        } else {
+            return makeUpcomingCell(collectionView, indexPath)
+            
+        }
+    }
+    
     fileprivate func makePopularCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> PopularCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCell.cellIdentifier, for: indexPath) as! PopularCell
         let card = popularArray[indexPath.row]
@@ -40,17 +52,4 @@ extension FeaturedViewController: UICollectionViewDataSource {
         cell.draw(card)
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if collectionView == popularCollectionView {
-            return makePopularCell(collectionView, indexPath)
-        } else if collectionView == nowPlayingCollectionView {
-            return makeNowPlayingCell(collectionView, indexPath)
-        } else {
-            return makeUpcomingCell(collectionView, indexPath)
-            
-        }
-    }
-    
 }
