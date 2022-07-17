@@ -18,7 +18,7 @@ class UpcomingCell: UICollectionViewCell {
     
     func draw(_ movie: Movie) {
         title.text = movie.title
-        image.image = UIImage(named: movie.poster)
+        image.image = UIImage(named: movie.posterPath)
         date.text = "\(movie.releaseDate.prefix(4))"
     }
 }

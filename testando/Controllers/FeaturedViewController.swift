@@ -17,18 +17,22 @@ class FeaturedViewController: UIViewController {
 
         nowPlayingCollectionView.dataSource = self
         nowPlayingCollectionView.delegate = self
-
+        
+        Task {
+            self.popularArray = await Movie.popularMoviesAPI()
+            self.popularCollectionView.reloadData()
+        }
+        
         upcomingCollectionView.dataSource = self
         upcomingCollectionView.delegate = self
 
-        print(popularArray)
     }
     
     @IBOutlet weak var popularCollectionView: UICollectionViewPopular!
     @IBOutlet weak var nowPlayingCollectionView: UICollectionViewNowPlaying!
     @IBOutlet weak var upcomingCollectionView: UICollectionViewUpcoming!
     
-    let popularArray = Movie.popularMovies()
+    var popularArray = Movie.popularMovies()
     
     let nowPlayingArray = Movie.nowPlayingMovies()
     
