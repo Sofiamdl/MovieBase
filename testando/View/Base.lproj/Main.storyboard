@@ -500,11 +500,43 @@
                         <outlet property="posterImage" destination="t4M-tc-Jwe" id="Gla-K5-HEP"/>
                         <outlet property="ratingLabel" destination="cvs-hO-V3w" id="oJo-d5-UlI"/>
                         <outlet property="titleLabel" destination="CtP-d6-RNP" id="fg0-na-0jb"/>
+                        <segue destination="Syc-3T-Fvl" kind="show" identifier="officialPosterSegue" id="TjT-SO-P6b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXK-6S-qf0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3931.1594202898555" y="100.44642857142857"/>
+        </scene>
+        <!--Official Poster-->
+        <scene sceneID="2u1-Rc-dzj">
+            <objects>
+                <viewController id="Syc-3T-Fvl" customClass="OfficialPosterViewController" customModule="testando" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BmE-K1-uVN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jrf-qo-LBH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hmU-fU-pmA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hmU-fU-pmA" firstAttribute="trailing" secondItem="jrf-qo-LBH" secondAttribute="trailing" id="SB6-1b-NqH"/>
+                            <constraint firstItem="hmU-fU-pmA" firstAttribute="bottom" secondItem="jrf-qo-LBH" secondAttribute="bottom" id="eiG-yO-lDU"/>
+                            <constraint firstItem="jrf-qo-LBH" firstAttribute="leading" secondItem="hmU-fU-pmA" secondAttribute="leading" id="ksl-DR-W8g"/>
+                            <constraint firstItem="jrf-qo-LBH" firstAttribute="top" secondItem="hmU-fU-pmA" secondAttribute="top" id="yoA-2F-dOx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Official Poster" largeTitleDisplayMode="never" id="pz0-c7-SC1"/>
+                    <size key="freeformSize" width="414" height="896"/>
+                    <connections>
+                        <outlet property="officialPosterImage" destination="jrf-qo-LBH" id="t3H-BI-70S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZlK-Gu-sax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5080" y="100"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2tc-rS-fME">
