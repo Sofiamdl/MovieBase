@@ -40,7 +40,7 @@ extension FeaturedViewController: UICollectionViewDataSource {
         Task {
             let imageData = await Movie.downloadImageData(withPath: movie)
             let imagem = UIImage(data: imageData) ?? UIImage()
-            cell.setup(card.title, image: imagem)
+            cell.setup(image: imagem)
         }
         return cell
     }
@@ -49,6 +49,12 @@ extension FeaturedViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NowPlayingCell.cellIdentifier, for: indexPath) as! NowPlayingCell
         let card = nowPlayingArray[indexPath.row]
         cell.draw(card)
+        let movie = nowPlayingArray[indexPath.item].posterPath
+        Task {
+            let imageData = await Movie.downloadImageData(withPath: movie)
+            let imagem = UIImage(data: imageData) ?? UIImage()
+            cell.setup(image: imagem)
+        }
         return cell
     }
     
@@ -56,6 +62,12 @@ extension FeaturedViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCell.cellIdentifier, for: indexPath) as! UpcomingCell
         let card = upcomingArray[indexPath.row]
         cell.draw(card)
+        let movie = upcomingArray[indexPath.item].posterPath
+        Task {
+            let imageData = await Movie.downloadImageData(withPath: movie)
+            let imagem = UIImage(data: imageData) ?? UIImage()
+            cell.setup(image: imagem)
+        }
         return cell
     }
 }

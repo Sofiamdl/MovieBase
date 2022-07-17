@@ -19,8 +19,13 @@ class FeaturedViewController: UIViewController {
         nowPlayingCollectionView.delegate = self
         
         Task {
-            self.popularArray = await Movie.popularMoviesAPI()
+            self.popularArray = await Movie.listMoviesFrom(path: "/3/movie/popular")
+            self.nowPlayingArray = await Movie.listMoviesFrom(path: "/3/movie/now_playing")
+            self.upcomingArray = await Movie.listMoviesFrom(path: "/3/movie/upcoming" )
             self.popularCollectionView.reloadData()
+            self.nowPlayingCollectionView.reloadData()
+            self.upcomingCollectionView.reloadData()
+
         }
         
         upcomingCollectionView.dataSource = self
@@ -34,9 +39,9 @@ class FeaturedViewController: UIViewController {
     
     var popularArray = Movie.popularMovies()
     
-    let nowPlayingArray = Movie.nowPlayingMovies()
+    var nowPlayingArray = Movie.nowPlayingMovies()
     
-    let upcomingArray = Movie.upcomingMovies()
+    var upcomingArray = Movie.upcomingMovies()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DetailsViewController {

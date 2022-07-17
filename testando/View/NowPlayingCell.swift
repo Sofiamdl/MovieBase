@@ -20,4 +20,8 @@ class NowPlayingCell: UICollectionViewCell {
         image.image = UIImage(named: movie.posterPath)
         date.text = String(movie.releaseDate.prefix(4))
     }
+    
+    func setup(image: UIImage) {
+        self.image.image = image
+    }
 }

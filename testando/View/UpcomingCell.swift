@@ -21,4 +21,8 @@ class UpcomingCell: UICollectionViewCell {
         image.image = UIImage(named: movie.posterPath)
         date.text = "\(movie.releaseDate.prefix(4))"
     }
+    
+    func setup(image: UIImage) {
+        self.image.image = image
+    }
 }
