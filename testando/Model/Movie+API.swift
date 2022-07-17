@@ -11,10 +11,10 @@ extension Movie {
 
     static let urlComponents = URLComponents(string: "https://api.themoviedb.org/")!
     
-    static func popularMoviesAPI() async -> [Movie] {
+    static func listMoviesFrom(path: String) async -> [Movie] {
         
         var components = Movie.urlComponents
-        components.path = "/3/movie/popular"
+        components.path = path
         components.queryItems = [
             URLQueryItem(name: "api_key", value: Movie.apiKey)
         ]
@@ -35,6 +35,8 @@ extension Movie {
         }
         return []
     }
+    
+    
     
     // MARK - Download de imagens
     

@@ -18,8 +18,7 @@ class PopularCell: UICollectionViewCell {
         image.image = UIImage()
     }
     
-    func setup(_ title: String, image: UIImage) {
-        self.title.text = title
+    func setup(image: UIImage) {
         self.image.image = image
     }
 }
