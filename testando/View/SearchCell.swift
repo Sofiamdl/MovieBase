@@ -17,6 +17,7 @@ class SearchCell: UITableViewCell {
     
     @IBOutlet var dateLabel: UILabel!
     
+    
     func draw(_ movie: Movie) {
         title.text = movie.title
         posterImage.image = UIImage(named: movie.posterPath)
@@ -27,4 +28,5 @@ class SearchCell: UITableViewCell {
         posterImage.image = image
     }
 
+   
 }

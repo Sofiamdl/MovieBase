@@ -15,10 +15,10 @@ extension SearchViewController: UISearchBarDelegate {
         } else {
             noSearchText.isHidden = true
         }
-        
         Task {
             self.tableViewContent = await Movie.searchMovies(searchString: searchText.lowercased())
             self.searchTableView.reloadData()
         }
+       
     }
 }
