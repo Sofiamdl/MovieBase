@@ -8,13 +8,13 @@
 import UIKit
 
 
-extension SeeAllViewController: UITableViewDataSource {
+extension TrendingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableViewContent.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SeeAllCell.cellIdentifier, for: indexPath) as! SeeAllCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TrendingCell.cellIdentifier, for: indexPath) as! TrendingCell
         let card = tableViewContent[indexPath.row]
         cell.draw(card)
         let movie = tableViewContent[indexPath.item].posterPath
