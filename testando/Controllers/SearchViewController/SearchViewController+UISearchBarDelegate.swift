@@ -19,6 +19,7 @@ extension SearchViewController: UISearchBarDelegate {
             self.tableViewContent = await Movie.searchMovies(searchString: searchText.lowercased())
             self.searchTableView.reloadData()
         }
+        
        
     }
 }

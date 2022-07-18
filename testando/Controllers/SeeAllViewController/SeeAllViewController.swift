@@ -11,7 +11,7 @@ class SeeAllViewController: UIViewController {
     
     @IBOutlet var seeAllTableView: UITableView!
     
-    var tableViewContent: [Movie] = Movie.popularMovies()
+    var tableViewContent: [Movie] = []
     var screenType: String?
     
     override func viewDidLoad() {

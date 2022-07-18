@@ -31,6 +31,14 @@ class FeaturedViewController: UIViewController {
         upcomingCollectionView.dataSource = self
         upcomingCollectionView.delegate = self
         
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        
+        tabBarController?.tabBar.barTintColor = UIColor.black
+        
     }
     
     @IBOutlet weak var popularCollectionView: UICollectionViewPopular!
@@ -38,11 +46,12 @@ class FeaturedViewController: UIViewController {
     @IBOutlet weak var upcomingCollectionView: UICollectionViewUpcoming!
     
     
-    var popularArray = Movie.popularMovies()
     
-    var nowPlayingArray = Movie.nowPlayingMovies()
+    var popularArray:[Movie] = []
     
-    var upcomingArray = Movie.upcomingMovies()
+    var nowPlayingArray:[Movie] = []
+    
+    var upcomingArray:[Movie] = []
     
     @IBAction func seeAllPopular(_ sender: UIButton) {
         self.performSegue(withIdentifier: "seeAllSegue", sender: "Popular")

@@ -23,6 +23,12 @@ class SearchViewController: UIViewController {
         searchTableView.dataSource = self
         
         searchBar.delegate = self
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        navigationController?.navigationBar.barTintColor = UIColor.black
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

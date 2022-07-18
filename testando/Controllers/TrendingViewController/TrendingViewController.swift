@@ -22,6 +22,12 @@ class TrendingViewController: UIViewController {
         trendingTableView.delegate = self
         trendingTableView.dataSource = self
 
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        navigationController?.navigationBar.barTintColor = UIColor.black
+
     }
     @IBAction func onChangeSelectedSegment(_ sender: UISegmentedControl) {
         changeDataFromTableView()
