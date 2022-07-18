@@ -14,7 +14,7 @@ class FeaturedViewController: UIViewController {
         // Do any additional setup after loading the view.
         popularCollectionView.dataSource = self
         popularCollectionView.delegate = self
-
+        
         nowPlayingCollectionView.dataSource = self
         nowPlayingCollectionView.delegate = self
         
@@ -25,17 +25,18 @@ class FeaturedViewController: UIViewController {
             self.popularCollectionView.reloadData()
             self.nowPlayingCollectionView.reloadData()
             self.upcomingCollectionView.reloadData()
-
+            
         }
         
         upcomingCollectionView.dataSource = self
         upcomingCollectionView.delegate = self
-
+        
     }
     
     @IBOutlet weak var popularCollectionView: UICollectionViewPopular!
     @IBOutlet weak var nowPlayingCollectionView: UICollectionViewNowPlaying!
     @IBOutlet weak var upcomingCollectionView: UICollectionViewUpcoming!
+    
     
     var popularArray = Movie.popularMovies()
     
@@ -43,13 +44,27 @@ class FeaturedViewController: UIViewController {
     
     var upcomingArray = Movie.upcomingMovies()
     
+    @IBAction func seeAllPopular(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "seeAllSegue", sender: "Popular")
+    }
+    
+    @IBAction func seeAllNowPlaying(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "seeAllSegue", sender: "Now Playing")
+    }
+    
+    
+    @IBAction func seeAllUpcoming(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "seeAllSegue", sender: "Upcoming")
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DetailsViewController {
             let movie = sender as? Movie
             destination.movie = movie
+        } else if let destination = segue.destination as? SeeAllViewController {
+            let type = sender as? String
+            destination.screenType = type
         }
-        // passar o filme adiante
+        
     }
-
 }
-
