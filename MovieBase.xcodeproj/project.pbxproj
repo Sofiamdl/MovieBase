@@ -42,7 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BFF5F78628737770000E2D8F /* testando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testando.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFF5F78628737770000E2D8F /* MovieBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF5F78928737770000E2D8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF5F78B28737770000E2D8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BFF5F78D28737770000E2D8F /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		BFF5F77D28737770000E2D8F = {
 			isa = PBXGroup;
 			children = (
-				BFF5F78828737770000E2D8F /* testando */,
+				BFF5F78828737770000E2D8F /* MovieBase */,
 				BFF5F78728737770000E2D8F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,12 +100,12 @@
 		BFF5F78728737770000E2D8F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BFF5F78628737770000E2D8F /* testando.app */,
+				BFF5F78628737770000E2D8F /* MovieBase.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BFF5F78828737770000E2D8F /* testando */ = {
+		BFF5F78828737770000E2D8F /* MovieBase */ = {
 			isa = PBXGroup;
 			children = (
 				BFF5F7AD287760BA000E2D8F /* Extensions */,
@@ -116,7 +116,7 @@
 				BFF5F78B28737770000E2D8F /* SceneDelegate.swift */,
 				BFF5F7B0287C9ED8000E2D8F /* SupportingFiles */,
 			);
-			path = testando;
+			path = MovieBase;
 			sourceTree = "<group>";
 		};
 		BFF5F79D287730B1000E2D8F /* Controllers */ = {
@@ -220,9 +220,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BFF5F78528737770000E2D8F /* testando */ = {
+		BFF5F78528737770000E2D8F /* MovieBase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BFF5F79A28737771000E2D8F /* Build configuration list for PBXNativeTarget "testando" */;
+			buildConfigurationList = BFF5F79A28737771000E2D8F /* Build configuration list for PBXNativeTarget "MovieBase" */;
 			buildPhases = (
 				BFF5F78228737770000E2D8F /* Sources */,
 				BFF5F78328737770000E2D8F /* Frameworks */,
@@ -232,9 +232,9 @@
 			);
 			dependencies = (
 			);
-			name = testando;
+			name = MovieBase;
 			productName = testando;
-			productReference = BFF5F78628737770000E2D8F /* testando.app */;
+			productReference = BFF5F78628737770000E2D8F /* MovieBase.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -252,7 +252,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BFF5F78128737770000E2D8F /* Build configuration list for PBXProject "testando" */;
+			buildConfigurationList = BFF5F78128737770000E2D8F /* Build configuration list for PBXProject "MovieBase" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -265,7 +265,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BFF5F78528737770000E2D8F /* testando */,
+				BFF5F78528737770000E2D8F /* MovieBase */,
 			);
 		};
 /* End PBXProject section */
@@ -466,7 +466,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = testando/Info.plist;
+				INFOPLIST_FILE = MovieBase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -477,7 +477,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = academy.s.testando;
+				PRODUCT_BUNDLE_IDENTIFIER = academy.s.MovieBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -493,7 +493,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = testando/Info.plist;
+				INFOPLIST_FILE = MovieBase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -504,7 +504,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = academy.s.testando;
+				PRODUCT_BUNDLE_IDENTIFIER = academy.s.MovieBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -515,7 +515,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BFF5F78128737770000E2D8F /* Build configuration list for PBXProject "testando" */ = {
+		BFF5F78128737770000E2D8F /* Build configuration list for PBXProject "MovieBase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BFF5F79828737771000E2D8F /* Debug */,
@@ -524,7 +524,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BFF5F79A28737771000E2D8F /* Build configuration list for PBXNativeTarget "testando" */ = {
+		BFF5F79A28737771000E2D8F /* Build configuration list for PBXNativeTarget "MovieBase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BFF5F79B28737771000E2D8F /* Debug */,
