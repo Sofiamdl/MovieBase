@@ -122,11 +122,11 @@
 		BFF5F79D287730B1000E2D8F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BFF5F7BD287F3F01000E2D8F /* DetailsViewController.swift */,
+				BFF5F7C72884BAB0000E2D8F /* OfficialPosterViewController.swift */,
 				BFF5F7E12885EED1000E2D8F /* SearchViewController */,
 				BFF5F7D42885E1AE000E2D8F /* TrendingViewController */,
 				BFF5F7CC2885AA12000E2D8F /* FeaturedViewController */,
-				BFF5F7BD287F3F01000E2D8F /* DetailsViewController.swift */,
-				BFF5F7C72884BAB0000E2D8F /* OfficialPosterViewController.swift */,
 				BFF5F7CD2885CA42000E2D8F /* SeeAllViewController */,
 			);
 			path = Controllers;
