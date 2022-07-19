@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BF5F658E288702340056E3E0 /* RuntimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F658D288702340056E3E0 /* RuntimeResponse.swift */; };
+		BF5F65902887053A0056E3E0 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F658F2887053A0056E3E0 /* Genre.swift */; };
+		BF5F65922887057E0056E3E0 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F65912887057E0056E3E0 /* Genres.swift */; };
 		BFF5F78A28737770000E2D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F78928737770000E2D8F /* AppDelegate.swift */; };
 		BFF5F78C28737770000E2D8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F78B28737770000E2D8F /* SceneDelegate.swift */; };
 		BFF5F78E28737770000E2D8F /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F78D28737770000E2D8F /* FeaturedViewController.swift */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		BF5F658D288702340056E3E0 /* RuntimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeResponse.swift; sourceTree = "<group>"; };
+		BF5F658F2887053A0056E3E0 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		BF5F65912887057E0056E3E0 /* Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
 		BFF5F78628737770000E2D8F /* MovieBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF5F78928737770000E2D8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF5F78B28737770000E2D8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 				BFF5F7A4287731D2000E2D8F /* Collections.swift */,
 				BFF5F7C52881F8D6000E2D8F /* MoviesResponse.swift */,
 				BF5F658D288702340056E3E0 /* RuntimeResponse.swift */,
+				BF5F658F2887053A0056E3E0 /* Genre.swift */,
+				BF5F65912887057E0056E3E0 /* Genres.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,6 +307,8 @@
 				BFF5F7C62881F8D6000E2D8F /* MoviesResponse.swift in Sources */,
 				BFF5F7D82885E1FF000E2D8F /* TrendingViewController.swift in Sources */,
 				BFF5F7CA2885A94A000E2D8F /* SeeAllViewController.swift in Sources */,
+				BF5F65902887053A0056E3E0 /* Genre.swift in Sources */,
+				BF5F65922887057E0056E3E0 /* Genres.swift in Sources */,
 				BF5F658E288702340056E3E0 /* RuntimeResponse.swift in Sources */,
 				BFF5F7E02885EE4C000E2D8F /* SearchCell.swift in Sources */,
 				BFF5F7BC287E144A000E2D8F /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */,

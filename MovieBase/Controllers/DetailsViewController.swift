@@ -24,7 +24,6 @@ class DetailsViewController: UIViewController {
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped))
                         posterImage.addGestureRecognizer(tapGR)
                         posterImage.isUserInteractionEnabled = true
-//        print(movie)
 
         guard let movie = movie else {
             return
@@ -40,10 +39,10 @@ class DetailsViewController: UIViewController {
 
             let backdropImage = UIImage(data: backdropImageData) ?? UIImage()
             let posterImage = UIImage(data: posterImageData) ?? UIImage()
-
             self.backdropImage.image = backdropImage
             self.posterImage.image = posterImage
             runtimeLabel.text = stringOfMinutesToHoursMinutes(movieRuntime.runtime)
+            genresLabel.text = moviesToString(movieRuntime.genres)
         }
         
         titleLabel.text = movie.title
@@ -68,16 +67,23 @@ class DetailsViewController: UIViewController {
         return "\(String(hour))h \(String(minutes)) min "
     }
 
+    func moviesToString(_ genres: [Genre]) -> String {
+        var stringAux = ""
+        for genre in genres {
+            stringAux = stringAux + genre.name + ", "
+        }
+        return stringAux
+    }
+//    
+//    func chooseContainsMovies(_ moviesIDs: [Int]?, genres: [Genre]) -> [Genre] {
+//        return genres.filter { moviesIDs.contains($0.id)}
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? OfficialPosterViewController {
             let movie = sender as? Movie
             destination.movie = movie
         }
-        // passar o filme adiante
     }
-    
-
-
 
 }
