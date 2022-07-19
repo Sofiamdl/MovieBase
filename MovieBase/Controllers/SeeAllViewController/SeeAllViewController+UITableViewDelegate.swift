@@ -11,6 +11,8 @@ extension SeeAllViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let movie:Movie = tableViewContent[indexPath.item]
         self.performSegue(withIdentifier: "detailsSegue", sender: movie)
+        tableView.deselectRow(at: indexPath, animated: true)
+
     }
     
 }
