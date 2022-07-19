@@ -5,6 +5,7 @@
 //  Created by sml on 13/07/22.
 //
 
+
 import UIKit
 
 class DetailsViewController: UIViewController {
@@ -19,8 +20,15 @@ class DetailsViewController: UIViewController {
     @IBOutlet var runtimeLabel: UILabel!
     
     @IBOutlet var genresLabel: UILabel!
+        
+    @IBOutlet var videoCollectionView: UICollectionView!
+    
+    var videosContent: [Video] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        videoCollectionView.dataSource = self
+        
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped))
                         posterImage.addGestureRecognizer(tapGR)
                         posterImage.isUserInteractionEnabled = true
@@ -30,19 +38,21 @@ class DetailsViewController: UIViewController {
         }
         
         
-        
         self.title = movie.title
         Task {
             let movieRuntime = await Movie.listRuntimeFrom(path: "/3/movie/\(String(movie.id))")!
             let backdropImageData = await Movie.downloadImageData(withPath: movie.backdropPath)
             let posterImageData = await Movie.downloadImageData(withPath: movie.posterPath)
-
+            
             let backdropImage = UIImage(data: backdropImageData) ?? UIImage()
             let posterImage = UIImage(data: posterImageData) ?? UIImage()
             self.backdropImage.image = backdropImage
             self.posterImage.image = posterImage
             runtimeLabel.text = stringOfMinutesToHoursMinutes(movieRuntime.runtime)
             genresLabel.text = moviesToString(movieRuntime.genres)
+            
+            videosContent = await Movie.searchVideo(movieId: movie.id)
+            self.videoCollectionView.reloadData()
         }
         
         titleLabel.text = movie.title

@@ -28,7 +28,9 @@ class SearchViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         navigationController?.navigationBar.barTintColor = UIColor.black
+        let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
 
+        textFieldInsideSearchBar?.textColor = UIColor.white
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

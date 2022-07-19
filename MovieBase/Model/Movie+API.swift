@@ -63,6 +63,30 @@ extension Movie {
         return []
     }
     
+    static func searchVideo(movieId: Int) async -> [Video] {
+        
+        var components = Movie.urlComponents
+        components.path = "/3/movie/\(movieId)/videos"
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey)
+        ]
+                
+        let session = URLSession.shared
+        do {
+            let (data, response) = try await session.data(from: components.url!)
+
+            let decoder = JSONDecoder()
+
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+            let videoResult = try decoder.decode(Videos.self, from: data)
+            return videoResult.results
+        } catch {
+            print(error)
+        }
+        return []
+    }
+    
     static func listRuntimeFrom(path: String) async -> RuntimeResponse? {
         var components = Movie.urlComponents
         components.path = path
