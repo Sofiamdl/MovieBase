@@ -16,7 +16,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet var posterImage: UIImageView!
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var overviewLabel: UILabel!
+    @IBOutlet var runtimeLabel: UILabel!
     
+    @IBOutlet var genresLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped))
@@ -28,8 +30,11 @@ class DetailsViewController: UIViewController {
             return
         }
         
+        
+        
         self.title = movie.title
         Task {
+            let movieRuntime = await Movie.listRuntimeFrom(path: "/3/movie/\(String(movie.id))")!
             let backdropImageData = await Movie.downloadImageData(withPath: movie.backdropPath)
             let posterImageData = await Movie.downloadImageData(withPath: movie.posterPath)
 
@@ -38,6 +43,7 @@ class DetailsViewController: UIViewController {
 
             self.backdropImage.image = backdropImage
             self.posterImage.image = posterImage
+            runtimeLabel.text = stringOfMinutesToHoursMinutes(movieRuntime.runtime)
         }
         
         titleLabel.text = movie.title
@@ -52,6 +58,16 @@ class DetailsViewController: UIViewController {
             self.performSegue(withIdentifier: "officialPosterSegue", sender: movie)
         }
     }
+    
+    func minutesToHoursMinutes(_ minutes: Int) -> (Int, Int) {
+        return ((minutes % 60) , (minutes / 60))
+    }
+    
+    func stringOfMinutesToHoursMinutes(_ minute: Int) -> String {
+        let (minutes, hour) = minutesToHoursMinutes(minute)
+        return "\(String(hour))h \(String(minutes)) min "
+    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? OfficialPosterViewController {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF5F658E288702340056E3E0 /* RuntimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F658D288702340056E3E0 /* RuntimeResponse.swift */; };
 		BFF5F78A28737770000E2D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F78928737770000E2D8F /* AppDelegate.swift */; };
 		BFF5F78C28737770000E2D8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F78B28737770000E2D8F /* SceneDelegate.swift */; };
 		BFF5F78E28737770000E2D8F /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF5F78D28737770000E2D8F /* FeaturedViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF5F658D288702340056E3E0 /* RuntimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeResponse.swift; sourceTree = "<group>"; };
 		BFF5F78628737770000E2D8F /* MovieBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF5F78928737770000E2D8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF5F78B28737770000E2D8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				BFF5F7A228773166000E2D8F /* Movie.swift */,
 				BFF5F7A4287731D2000E2D8F /* Collections.swift */,
 				BFF5F7C52881F8D6000E2D8F /* MoviesResponse.swift */,
+				BF5F658D288702340056E3E0 /* RuntimeResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				BFF5F7C62881F8D6000E2D8F /* MoviesResponse.swift in Sources */,
 				BFF5F7D82885E1FF000E2D8F /* TrendingViewController.swift in Sources */,
 				BFF5F7CA2885A94A000E2D8F /* SeeAllViewController.swift in Sources */,
+				BF5F658E288702340056E3E0 /* RuntimeResponse.swift in Sources */,
 				BFF5F7E02885EE4C000E2D8F /* SearchCell.swift in Sources */,
 				BFF5F7BC287E144A000E2D8F /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */,
 				BFF5F7CF2885CA9D000E2D8F /* SeeAllViewController+UITableViewDelegate.swift in Sources */,
@@ -465,6 +469,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M3SKJK6V42;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovieBase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -476,7 +481,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = academy.s.MovieBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -492,6 +497,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M3SKJK6V42;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovieBase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -503,7 +509,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = academy.s.MovieBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

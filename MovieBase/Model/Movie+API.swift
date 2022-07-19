@@ -63,6 +63,29 @@ extension Movie {
         return []
     }
     
+    static func listRuntimeFrom(path: String) async -> RuntimeResponse? {
+        var components = Movie.urlComponents
+        components.path = path
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey)
+        ]
+                
+        let session = URLSession.shared
+        do {
+            let (data, response) = try await session.data(from: components.url!)
+
+            let decoder = JSONDecoder()
+
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+            let movieResult = try decoder.decode(RuntimeResponse.self, from: data)
+            return movieResult
+        } catch {
+            print(error)
+        }
+        return nil
+    }
+    
     
     
     // MARK - Download de imagens
