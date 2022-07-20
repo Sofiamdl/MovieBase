@@ -13,6 +13,8 @@ class SeeAllViewController: UIViewController {
     
     var tableViewContent: [Movie] = []
     var screenType: String?
+    var paginating: Bool = false
+    var page = "2"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,3 +48,4 @@ class SeeAllViewController: UIViewController {
         }
     }
 }
+

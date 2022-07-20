@@ -11,6 +11,7 @@ extension Movie {
 
     static let urlComponents = URLComponents(string: "https://api.themoviedb.org/")!
     
+    
     static func listMoviesFrom(path: String) async -> [Movie] {
         
         var components = Movie.urlComponents
@@ -36,14 +37,47 @@ extension Movie {
         return []
     }
     
-    static func searchMovies(searchString: String) async -> [Movie] {
+    static func searchMovies(searchString: String, page: String?) async -> [Movie] {
         
         var components = Movie.urlComponents
         components.path = "/3/search/movie"
+        if page != nil {
+            components.queryItems = [
+                URLQueryItem(name: "api_key", value: Movie.apiKey),
+                URLQueryItem(name: "query", value: searchString),
+                URLQueryItem(name: "page", value: page)
+            ]
+        } else {
         components.queryItems = [
             URLQueryItem(name: "api_key", value: Movie.apiKey),
             URLQueryItem(name: "query", value: searchString)
 
+        ]
+        }
+                
+        let session = URLSession.shared
+        do {
+            let (data, response) = try await session.data(from: components.url!)
+
+            let decoder = JSONDecoder()
+
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+            let movieResult = try decoder.decode(MoviesResponse.self, from: data)
+
+            return movieResult.results
+        } catch {
+            print(error)
+        }
+        return []
+    }
+    
+    static func paginateMovies(page: String, path: String) async -> [Movie] {
+        var components = Movie.urlComponents
+        components.path = path
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey),
+            URLQueryItem(name: "page", value: page)
         ]
                 
         let session = URLSession.shared
@@ -57,6 +91,30 @@ extension Movie {
             let movieResult = try decoder.decode(MoviesResponse.self, from: data)
 
             return movieResult.results
+        } catch {
+            print(error)
+        }
+        return []
+    }
+    
+    static func searchVideo(movieId: Int) async -> [Video] {
+        
+        var components = Movie.urlComponents
+        components.path = "/3/movie/\(movieId)/videos"
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey)
+        ]
+                
+        let session = URLSession.shared
+        do {
+            let (data, response) = try await session.data(from: components.url!)
+
+            let decoder = JSONDecoder()
+
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+            let videoResult = try decoder.decode(Videos.self, from: data)
+            return videoResult.results
         } catch {
             print(error)
         }

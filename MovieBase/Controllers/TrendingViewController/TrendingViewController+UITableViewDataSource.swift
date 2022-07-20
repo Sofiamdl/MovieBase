@@ -26,5 +26,4 @@ extension TrendingViewController: UITableViewDataSource {
         return cell
     }
     
-    
 }
