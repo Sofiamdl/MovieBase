@@ -9,14 +9,15 @@ import UIKit
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
         if searchText == "" {
             noSearchText.isHidden = false
         } else {
             noSearchText.isHidden = true
         }
         Task {
-            self.tableViewContent = await Movie.searchMovies(searchString: searchText.lowercased())
+            self.tableViewContent = await Movie.searchMovies(searchString: searchText.lowercased(), page: nil)
+            self.searchText = searchText
+            self.page = "2"
             self.searchTableView.reloadData()
         }
         

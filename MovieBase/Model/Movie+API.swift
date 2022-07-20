@@ -37,15 +37,23 @@ extension Movie {
         return []
     }
     
-    static func searchMovies(searchString: String) async -> [Movie] {
+    static func searchMovies(searchString: String, page: String?) async -> [Movie] {
         
         var components = Movie.urlComponents
         components.path = "/3/search/movie"
+        if page != nil {
+            components.queryItems = [
+                URLQueryItem(name: "api_key", value: Movie.apiKey),
+                URLQueryItem(name: "query", value: searchString),
+                URLQueryItem(name: "page", value: page)
+            ]
+        } else {
         components.queryItems = [
             URLQueryItem(name: "api_key", value: Movie.apiKey),
             URLQueryItem(name: "query", value: searchString)
 
         ]
+        }
                 
         let session = URLSession.shared
         do {
