@@ -12,6 +12,8 @@ class TrendingViewController: UIViewController {
     @IBOutlet var trendingSegmentControl: UISegmentedControl!
     
     var tableViewContent: [Movie] = []
+    var paginating: Bool = false
+    var page = "2"
     
     @IBOutlet var trendingTableView: UITableView!
     override func viewDidLoad() {
