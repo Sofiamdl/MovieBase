@@ -11,6 +11,7 @@ extension Movie {
 
     static let urlComponents = URLComponents(string: "https://api.themoviedb.org/")!
     
+    
     static func listMoviesFrom(path: String) async -> [Movie] {
         
         var components = Movie.urlComponents
@@ -44,6 +45,31 @@ extension Movie {
             URLQueryItem(name: "api_key", value: Movie.apiKey),
             URLQueryItem(name: "query", value: searchString)
 
+        ]
+                
+        let session = URLSession.shared
+        do {
+            let (data, response) = try await session.data(from: components.url!)
+
+            let decoder = JSONDecoder()
+
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+            let movieResult = try decoder.decode(MoviesResponse.self, from: data)
+
+            return movieResult.results
+        } catch {
+            print(error)
+        }
+        return []
+    }
+    
+    static func paginateMovies(page: String, path: String) async -> [Movie] {
+        var components = Movie.urlComponents
+        components.path = path
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey),
+            URLQueryItem(name: "page", value: page)
         ]
                 
         let session = URLSession.shared
