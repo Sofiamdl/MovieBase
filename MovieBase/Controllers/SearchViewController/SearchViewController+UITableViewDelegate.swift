@@ -12,15 +12,15 @@ extension SearchViewController: UITableViewDelegate {
         let movie:Movie = tableViewContent[indexPath.item]
         self.performSegue(withIdentifier: "detailsSegue", sender: movie)
         tableView.deselectRow(at: indexPath, animated: true)
-
+        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if !paginating {
-            let position = scrollView.contentOffset.y
-            if position > searchTableView.contentSize.height-100-scrollView.frame.size.height {
+        let position = scrollView.contentOffset.y
+        if position > searchTableView.contentSize.height-100-scrollView.frame.size.height {
+            if !paginating {
+                
                 Task {
-                    print("paginando")
                     paginating = true
                     var auxTableViewContent: [Movie] = await Movie.searchMovies(searchString: self.searchText, page: self.page)
                     tableViewContent = tableViewContent + auxTableViewContent
@@ -31,5 +31,6 @@ extension SearchViewController: UITableViewDelegate {
             }
         }
     }
-    
 }
+
+

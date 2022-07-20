@@ -15,11 +15,11 @@ extension SeeAllViewController: UITableViewDelegate, UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if !paginating {
-            let position = scrollView.contentOffset.y
-            if position > seeAllTableView.contentSize.height-100-scrollView.frame.size.height {
-                Task {
-                    print("paginando")
+        let position = scrollView.contentOffset.y
+        if position > seeAllTableView.contentSize.height-100-scrollView.frame.size.height {
+            Task {
+                if !paginating {
+                    
                     paginating = true
                     var auxTableViewContent: [Movie]
                     if screenType == "Popular" {
